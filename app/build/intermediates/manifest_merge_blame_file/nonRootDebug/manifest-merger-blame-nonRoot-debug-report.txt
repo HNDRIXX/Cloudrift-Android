@@ -1,0 +1,469 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.limelight.debug"
+4    android:versionCode="314"
+5    android:versionName="12.1" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:5:5-79
+12-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:5:22-76
+13    <uses-permission android:name="android.permission.VIBRATE" />
+13-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:6:5-66
+13-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:6:22-63
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:7:5-68
+14-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:7:22-65
+15    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+15-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:8:5-76
+15-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:8:22-73
+16    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA" />
+16-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:9:5-88
+16-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:9:22-86
+17    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" /> <!-- We don't need a MulticastLock on API level 34+ because we use NsdManager for mDNS -->
+17-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:10:5-89
+17-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:10:22-87
+18    <uses-permission
+18-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:13:5-15:38
+19        android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"
+19-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:14:9-70
+20        android:maxSdkVersion="33" />
+20-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:15:9-35
+21
+22    <uses-feature
+22-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:17:5-19:36
+23        android:name="android.hardware.touchscreen"
+23-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:18:9-52
+24        android:required="false" />
+24-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:19:9-33
+25    <uses-feature
+25-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:20:5-22:36
+26        android:name="android.hardware.wifi"
+26-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:21:9-45
+27        android:required="false" />
+27-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:22:9-33
+28    <uses-feature
+28-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:23:5-25:36
+29        android:name="android.hardware.gamepad"
+29-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:24:9-48
+30        android:required="false" />
+30-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:25:9-33
+31    <uses-feature
+31-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:26:5-28:36
+32        android:name="android.hardware.usb.host"
+32-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:27:9-49
+33        android:required="false" />
+33-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:28:9-33
+34    <uses-feature
+34-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:29:5-31:36
+35        android:name="android.software.leanback"
+35-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:30:9-49
+36        android:required="false" />
+36-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:31:9-33
+37    <uses-feature
+37-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:32:5-34:36
+38        android:name="android.hardware.sensor.accelerometer"
+38-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:33:9-61
+39        android:required="false" />
+39-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:34:9-33
+40    <uses-feature
+40-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:35:5-37:36
+41        android:name="android.hardware.sensor.gyroscope"
+41-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:36:9-57
+42        android:required="false" /> <!-- Disable legacy input emulation on ChromeOS -->
+42-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:37:9-33
+43    <uses-feature
+43-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:40:5-42:35
+44        android:name="android.hardware.type.pc"
+44-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:41:9-48
+45        android:required="false" /> <!-- Non-root application name -->
+45-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:42:9-33
+46    <!-- FIXME: We should set extractNativeLibs=false but this breaks installation on the Fire TV 3 -->
+47    <application
+47-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:44:5-188:19
+48        android:allowBackup="true"
+48-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:45:9-35
+49        android:appCategory="game"
+49-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:51:9-35
+50        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+50-->[androidx.core:core:1.2.0] C:\Users\PC\.gradle\caches\transforms-3\25cc170510bf27e0652d922c0989f426\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
+51        android:banner="@drawable/atv_banner"
+51-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:50:9-46
+52        android:dataExtractionRules="@xml/backup_rules_s"
+52-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:47:9-58
+53        android:debuggable="true"
+54        android:enableOnBackInvokedCallback="false"
+54-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:56:9-52
+55        android:extractNativeLibs="true"
+56        android:fullBackupContent="@xml/backup_rules"
+56-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:46:9-54
+57        android:gwpAsanMode="always"
+57-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:54:9-37
+58        android:icon="@mipmap/ic_launcher"
+58-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:52:9-43
+59        android:installLocation="auto"
+59-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:53:9-39
+60        android:isGame="true"
+60-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:49:9-30
+61        android:label="@string/app_label"
+61-->C:\Users\PC\Desktop\cloudrift\app\src\nonRoot\AndroidManifest.xml:6:18-51
+62        android:localeConfig="@xml/locales_config"
+62-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:55:9-51
+63        android:networkSecurityConfig="@xml/network_security_config"
+63-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:48:9-69
+64        android:testOnly="true"
+65        android:theme="@style/AppTheme" >
+65-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:57:9-40
+66        <provider
+67            android:name="com.limelight.PosterContentProvider"
+68            android:authorities="poster.com.limelight.debug"
+69            android:enabled="true"
+70            android:exported="true" >
+71        </provider> <!-- Samsung multi-window support -->
+72        <uses-library
+72-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:67:9-69:40
+73            android:name="com.sec.android.app.multiwindow"
+73-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:68:13-59
+74            android:required="false" />
+74-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:69:13-37
+75
+76        <meta-data
+76-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:70:9-72:36
+77            android:name="com.sec.android.support.multiwindow"
+77-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:71:13-63
+78            android:value="true" />
+78-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:72:13-33
+79        <!--
+80 Disable Game Mode downscaling since it can break our UI dialogs and doesn't benefit
+81             performance much for us since we don't use GL/Vulkan for rendering anyway
+82        -->
+83        <meta-data
+83-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:76:9-78:36
+84            android:name="com.android.graphics.intervention.wm.allowDownscale"
+84-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:77:13-79
+85            android:value="false" /> <!-- Game Mode configuration -->
+85-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:78:13-34
+86        <meta-data
+86-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:81:9-83:56
+87            android:name="android.game_mode_config"
+87-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:82:13-52
+88            android:resource="@xml/game_mode_config" />
+88-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:83:13-53
+89        <!--
+90 Samsung DeX support requires explicit placement of android:resizeableActivity="true"
+91             in each activity even though it is implied by targeting API 24+
+92        -->
+93        <activity
+93-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:88:9-106:20
+94            android:name="com.limelight.PcView"
+94-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:89:13-35
+95            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+95-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:93:13-179
+96            android:enableOnBackInvokedCallback="true"
+96-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:92:13-55
+97            android:exported="true"
+97-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:90:13-36
+98            android:resizeableActivity="true" >
+98-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:91:13-46
+99            <meta-data
+99-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:13-115
+100                android:name="WindowManagerPreference:FreeformWindowSize"
+100-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:24-81
+101                android:value="system-default" />
+101-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:82-112
+102            <meta-data
+102-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:13-117
+103                android:name="WindowManagerPreference:FreeformWindowOrientation"
+103-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:24-88
+104                android:value="landscape" />
+104-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:89-114
+105
+106            <intent-filter>
+106-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:98:13-105:29
+107                <action android:name="android.intent.action.MAIN" />
+107-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:99:17-69
+107-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:99:25-66
+108
+109                <category android:name="android.intent.category.LAUNCHER" />
+109-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:101:17-77
+109-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:101:27-74
+110                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+110-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:102:17-89
+110-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:102:27-86
+111                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+111-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:103:17-86
+111-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:103:27-83
+112                <category android:name="tv.ouya.intent.category.APP" />
+112-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:104:17-72
+112-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:104:27-69
+113            </intent-filter>
+114        </activity> <!-- Small hack to support launcher shortcuts without relaunching over and over again when the back button is pressed -->
+115        <activity
+115-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:108:9-117:20
+116            android:name="com.limelight.ShortcutTrampoline"
+116-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:109:13-47
+117            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+117-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:114:13-186
+118            android:enableOnBackInvokedCallback="true"
+118-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:113:13-55
+119            android:exported="true"
+119-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:111:13-36
+120            android:noHistory="true"
+120-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:110:13-37
+121            android:resizeableActivity="true" >
+121-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:112:13-46
+122            <meta-data
+122-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:13-115
+123                android:name="WindowManagerPreference:FreeformWindowSize"
+123-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:24-81
+124                android:value="system-default" />
+124-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:82-112
+125            <meta-data
+125-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:13-117
+126                android:name="WindowManagerPreference:FreeformWindowOrientation"
+126-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:24-88
+127                android:value="landscape" />
+127-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:89-114
+128        </activity>
+129        <activity
+129-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:118:9-125:20
+130            android:name="com.limelight.AppView"
+130-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:119:13-36
+131            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+131-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:122:13-179
+132            android:enableOnBackInvokedCallback="true"
+132-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:121:13-55
+133            android:resizeableActivity="true" >
+133-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:120:13-46
+134            <meta-data
+134-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:13-115
+135                android:name="WindowManagerPreference:FreeformWindowSize"
+135-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:24-81
+136                android:value="system-default" />
+136-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:82-112
+137            <meta-data
+137-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:13-117
+138                android:name="WindowManagerPreference:FreeformWindowOrientation"
+138-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:24-88
+139                android:value="landscape" />
+139-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:89-114
+140        </activity>
+141        <activity
+141-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:126:9-134:20
+142            android:name="com.limelight.preferences.StreamSettings"
+142-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:127:13-55
+143            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+143-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:130:13-179
+144            android:enableOnBackInvokedCallback="true"
+144-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:129:13-55
+145            android:label="Streaming Settings"
+145-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:131:13-47
+146            android:resizeableActivity="true" >
+146-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:128:13-46
+147            <meta-data
+147-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:13-115
+148                android:name="WindowManagerPreference:FreeformWindowSize"
+148-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:24-81
+149                android:value="system-default" />
+149-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:82-112
+150            <meta-data
+150-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:13-117
+151                android:name="WindowManagerPreference:FreeformWindowOrientation"
+151-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:24-88
+152                android:value="landscape" />
+152-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:89-114
+153        </activity>
+154        <activity
+154-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:135:9-144:20
+155            android:name="com.limelight.preferences.AddComputerManually"
+155-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:136:13-60
+156            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+156-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:140:13-179
+157            android:enableOnBackInvokedCallback="true"
+157-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:139:13-55
+158            android:label="Add Computer Manually"
+158-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:141:13-50
+159            android:resizeableActivity="true"
+159-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:137:13-46
+160            android:windowSoftInputMode="stateVisible" >
+160-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:138:13-55
+161            <meta-data
+161-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:13-115
+162                android:name="WindowManagerPreference:FreeformWindowSize"
+162-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:24-81
+163                android:value="system-default" />
+163-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:82-112
+164            <meta-data
+164-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:13-117
+165                android:name="WindowManagerPreference:FreeformWindowOrientation"
+165-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:24-88
+166                android:value="landscape" />
+166-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:89-114
+167        </activity>
+168        <activity
+168-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:145:9-168:20
+169            android:name="com.limelight.Game"
+169-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:146:13-33
+170            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+170-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:147:13-186
+171            android:enableOnBackInvokedCallback="false"
+171-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:151:13-56
+172            android:excludeFromRecents="true"
+172-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:153:13-46
+173            android:launchMode="singleTask"
+173-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:152:13-44
+174            android:noHistory="true"
+174-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:148:13-37
+175            android:preferMinimalPostProcessing="true"
+175-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:155:13-55
+176            android:resizeableActivity="true"
+176-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:150:13-46
+177            android:supportsPictureInPicture="true"
+177-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:149:13-52
+178            android:theme="@style/StreamTheme" >
+178-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:154:13-47
+179            <meta-data
+179-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:13-115
+180                android:name="WindowManagerPreference:FreeformWindowSize"
+180-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:24-81
+181                android:value="system-default" />
+181-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:82-112
+182            <meta-data
+182-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:13-117
+183                android:name="WindowManagerPreference:FreeformWindowOrientation"
+183-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:24-88
+184                android:value="landscape" />
+184-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:89-114
+185
+186            <!--
+187                 Special metadata for NVIDIA Shield devices to prevent input buffering
+188                 and most importantly, opt out of mouse acceleration while streaming
+189            -->
+190            <meta-data
+190-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:162:13-164:40
+191                android:name="com.nvidia.immediateInput"
+191-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:163:17-57
+192                android:value="true" />
+192-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:164:17-37
+193            <meta-data
+193-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:165:13-167:40
+194                android:name="com.nvidia.rawCursorInput"
+194-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:166:17-57
+195                android:value="true" />
+195-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:167:17-37
+196        </activity>
+197
+198        <service
+198-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:170:9-172:62
+199            android:name="com.limelight.discovery.DiscoveryService"
+199-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:171:13-55
+200            android:label="mDNS PC Auto-Discovery Service" />
+200-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:172:13-59
+201        <service
+201-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:173:9-175:59
+202            android:name="com.limelight.computers.ComputerManagerService"
+202-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:174:13-61
+203            android:label="Computer Management Service" />
+203-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:175:13-56
+204        <service
+204-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:176:9-178:50
+205            android:name="com.limelight.binding.input.driver.UsbDriverService"
+205-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:177:13-66
+206            android:label="Usb Driver Service" />
+206-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:178:13-47
+207
+208        <activity
+208-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:180:9-187:20
+209            android:name="com.limelight.HelpActivity"
+209-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:181:13-41
+210            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+210-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:184:13-179
+211            android:enableOnBackInvokedCallback="true"
+211-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:183:13-55
+212            android:resizeableActivity="true" >
+212-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:182:13-46
+213            <meta-data
+213-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:13-115
+214                android:name="WindowManagerPreference:FreeformWindowSize"
+214-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:24-81
+215                android:value="system-default" />
+215-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:95:82-112
+216            <meta-data
+216-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:13-117
+217                android:name="WindowManagerPreference:FreeformWindowOrientation"
+217-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:24-88
+218                android:value="landscape" />
+218-->C:\Users\PC\Desktop\cloudrift\app\src\main\AndroidManifest.xml:96:89-114
+219        </activity>
+220
+221        <service
+221-->[com.google.firebase:firebase-database:20.3.1] C:\Users\PC\.gradle\caches\transforms-3\2a6297ce766a9ea8260874d076b24066\transformed\firebase-database-20.3.1\AndroidManifest.xml:26:9-35:19
+222            android:name="com.google.firebase.components.ComponentDiscoveryService"
+222-->[com.google.firebase:firebase-database:20.3.1] C:\Users\PC\.gradle\caches\transforms-3\2a6297ce766a9ea8260874d076b24066\transformed\firebase-database-20.3.1\AndroidManifest.xml:27:13-84
+223            android:directBootAware="true"
+223-->[com.google.firebase:firebase-common:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\c7cd0dabb3eceb444e367865a3d4133f\transformed\firebase-common-20.4.2\AndroidManifest.xml:32:13-43
+224            android:exported="false" >
+224-->[com.google.firebase:firebase-database:20.3.1] C:\Users\PC\.gradle\caches\transforms-3\2a6297ce766a9ea8260874d076b24066\transformed\firebase-database-20.3.1\AndroidManifest.xml:28:13-37
+225            <meta-data
+225-->[com.google.firebase:firebase-database:20.3.1] C:\Users\PC\.gradle\caches\transforms-3\2a6297ce766a9ea8260874d076b24066\transformed\firebase-database-20.3.1\AndroidManifest.xml:29:13-31:85
+226                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+226-->[com.google.firebase:firebase-database:20.3.1] C:\Users\PC\.gradle\caches\transforms-3\2a6297ce766a9ea8260874d076b24066\transformed\firebase-database-20.3.1\AndroidManifest.xml:30:17-120
+227                android:value="com.google.firebase.components.ComponentRegistrar" />
+227-->[com.google.firebase:firebase-database:20.3.1] C:\Users\PC\.gradle\caches\transforms-3\2a6297ce766a9ea8260874d076b24066\transformed\firebase-database-20.3.1\AndroidManifest.xml:31:17-82
+228            <meta-data
+228-->[com.google.firebase:firebase-database:20.3.1] C:\Users\PC\.gradle\caches\transforms-3\2a6297ce766a9ea8260874d076b24066\transformed\firebase-database-20.3.1\AndroidManifest.xml:32:13-34:85
+229                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+229-->[com.google.firebase:firebase-database:20.3.1] C:\Users\PC\.gradle\caches\transforms-3\2a6297ce766a9ea8260874d076b24066\transformed\firebase-database-20.3.1\AndroidManifest.xml:33:17-109
+230                android:value="com.google.firebase.components.ComponentRegistrar" />
+230-->[com.google.firebase:firebase-database:20.3.1] C:\Users\PC\.gradle\caches\transforms-3\2a6297ce766a9ea8260874d076b24066\transformed\firebase-database-20.3.1\AndroidManifest.xml:34:17-82
+231            <meta-data
+231-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\300cb82548902f257bcaeb54ad1bfd18\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+232                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+232-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\300cb82548902f257bcaeb54ad1bfd18\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+233                android:value="com.google.firebase.components.ComponentRegistrar" />
+233-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\300cb82548902f257bcaeb54ad1bfd18\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+234            <meta-data
+234-->[com.google.firebase:firebase-common:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\c7cd0dabb3eceb444e367865a3d4133f\transformed\firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+235                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+235-->[com.google.firebase:firebase-common:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\c7cd0dabb3eceb444e367865a3d4133f\transformed\firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+236                android:value="com.google.firebase.components.ComponentRegistrar" />
+236-->[com.google.firebase:firebase-common:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\c7cd0dabb3eceb444e367865a3d4133f\transformed\firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+237        </service>
+238
+239        <provider
+239-->[com.google.firebase:firebase-common:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\c7cd0dabb3eceb444e367865a3d4133f\transformed\firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+240            android:name="com.google.firebase.provider.FirebaseInitProvider"
+240-->[com.google.firebase:firebase-common:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\c7cd0dabb3eceb444e367865a3d4133f\transformed\firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+241            android:authorities="com.limelight.debug.firebaseinitprovider"
+241-->[com.google.firebase:firebase-common:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\c7cd0dabb3eceb444e367865a3d4133f\transformed\firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+242            android:directBootAware="true"
+242-->[com.google.firebase:firebase-common:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\c7cd0dabb3eceb444e367865a3d4133f\transformed\firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+243            android:exported="false"
+243-->[com.google.firebase:firebase-common:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\c7cd0dabb3eceb444e367865a3d4133f\transformed\firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+244            android:initOrder="100" />
+244-->[com.google.firebase:firebase-common:20.4.2] C:\Users\PC\.gradle\caches\transforms-3\c7cd0dabb3eceb444e367865a3d4133f\transformed\firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+245
+246        <activity
+246-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\PC\.gradle\caches\transforms-3\8fa236e9514801239177539f4a0ba660\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+247            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+247-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\PC\.gradle\caches\transforms-3\8fa236e9514801239177539f4a0ba660\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+248            android:exported="false"
+248-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\PC\.gradle\caches\transforms-3\8fa236e9514801239177539f4a0ba660\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+249            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+249-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\PC\.gradle\caches\transforms-3\8fa236e9514801239177539f4a0ba660\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+250
+251        <meta-data
+251-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\PC\.gradle\caches\transforms-3\e854e71939d22154524411a58054f7f3\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+252            android:name="com.google.android.gms.version"
+252-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\PC\.gradle\caches\transforms-3\e854e71939d22154524411a58054f7f3\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+253            android:value="@integer/google_play_services_version" />
+253-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\PC\.gradle\caches\transforms-3\e854e71939d22154524411a58054f7f3\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+254    </application>
+255
+256</manifest>

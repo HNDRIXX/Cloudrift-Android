@@ -1,0 +1,42 @@
+<variant
+    name="nonRootRelease"
+    package="com.limelight"
+    minSdkVersion="16"
+    targetSdkVersion="34"
+    shrinking="true"
+    mergedManifest="build\intermediates\merged_manifest\nonRootRelease\AndroidManifest.xml"
+    proguardFiles="build\intermediates\default_proguard_files\global\proguard-android.txt-8.2.2;proguard-rules.pro"
+    partialResultsDir="build\intermediates\lint_vital_partial_results\nonRootRelease\out"
+    desugaredMethodsFiles="C:\Users\PC\.gradle\caches\transforms-3\fd864c30a791813cc426777979ea2785\transformed\D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src\main\AndroidManifest.xml;src\nonRoot\AndroidManifest.xml"
+        javaDirectories="src\main\java;src\nonRoot\java;src\release\java;src\nonRootRelease\java;src\main\kotlin;src\nonRoot\kotlin;src\release\kotlin;src\nonRootRelease\kotlin"
+        resDirectories="src\main\res;src\nonRoot\res;src\release\res;src\nonRootRelease\res"
+        assetsDirectories="src\main\assets;src\nonRoot\assets;src\release\assets;src\nonRootRelease\assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <resValues>
+    <resValue
+        type="string"
+        name="app_label"
+        value="Cloudrift" />
+    <resValue
+        type="string"
+        name="app_label_root"
+        value="Cloudrift" />
+  </resValues>
+  <artifact
+      classOutputs="build\intermediates\javac\nonRootRelease\classes;build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\nonRootRelease\R.jar"
+      type="MAIN"
+      applicationId="com.limelight.unofficial"
+      generatedSourceFolders="build\generated\ap_generated_sources\nonRootRelease\out;build\generated\source\buildConfig\nonRoot\release"
+      generatedResourceFolders="build\generated\res\resValues\nonRoot\release"
+      desugaredMethodsFiles="C:\Users\PC\.gradle\caches\transforms-3\fd864c30a791813cc426777979ea2785\transformed\D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>

@@ -1,0 +1,2 @@
+C:\Users\PC\Desktop\cloudrift\app\src\main\jni\Android.mk
+C:\Users\PC\Desktop\cloudrift\app\src\main\jni\Application.mk

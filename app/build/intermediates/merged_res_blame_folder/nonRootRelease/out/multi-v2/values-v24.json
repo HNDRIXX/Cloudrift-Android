@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.limelight.app-mergeNonRootReleaseResources-7:/values-v24/values-v24.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\res\\values-v24\\styles.xml",
+                    "from": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "243",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "384"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "194"
+                    }
+                }
+            ]
+        }
+    ]
+}

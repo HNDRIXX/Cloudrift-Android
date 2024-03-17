@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.limelight.debug"
+    android:versionCode="314"
+    android:versionName="12.1" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="34" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.android.providers.tv.permission.READ_EPG_DATA" />
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA" /> <!-- We don't need a MulticastLock on API level 34+ because we use NsdManager for mDNS -->
+    <uses-permission
+        android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"
+        android:maxSdkVersion="33" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.gamepad"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.gyroscope"
+        android:required="false" /> <!-- Disable legacy input emulation on ChromeOS -->
+    <uses-feature
+        android:name="android.hardware.type.pc"
+        android:required="false" /> <!-- Non-root application name -->
+    <!-- FIXME: We should set extractNativeLibs=false but this breaks installation on the Fire TV 3 -->
+    <application
+        android:allowBackup="true"
+        android:appCategory="game"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:banner="@drawable/atv_banner"
+        android:dataExtractionRules="@xml/backup_rules_s"
+        android:debuggable="true"
+        android:enableOnBackInvokedCallback="false"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:gwpAsanMode="always"
+        android:icon="@mipmap/ic_launcher"
+        android:installLocation="auto"
+        android:isGame="true"
+        android:label="@string/app_label"
+        android:localeConfig="@xml/locales_config"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <provider
+            android:name="com.limelight.PosterContentProvider"
+            android:authorities="poster.com.limelight.debug"
+            android:enabled="true"
+            android:exported="true" >
+        </provider> <!-- Samsung multi-window support -->
+        <uses-library
+            android:name="com.sec.android.app.multiwindow"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.sec.android.support.multiwindow"
+            android:value="true" />
+        <!--
+ Disable Game Mode downscaling since it can break our UI dialogs and doesn't benefit
+             performance much for us since we don't use GL/Vulkan for rendering anyway
+        -->
+        <meta-data
+            android:name="com.android.graphics.intervention.wm.allowDownscale"
+            android:value="false" /> <!-- Game Mode configuration -->
+        <meta-data
+            android:name="android.game_mode_config"
+            android:resource="@xml/game_mode_config" />
+        <!--
+ Samsung DeX support requires explicit placement of android:resizeableActivity="true"
+             in each activity even though it is implied by targeting API 24+
+        -->
+        <activity
+            android:name="com.limelight.PcView"
+            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:enableOnBackInvokedCallback="true"
+            android:exported="true"
+            android:resizeableActivity="true" >
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowSize"
+                android:value="system-default" />
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowOrientation"
+                android:value="landscape" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <category android:name="tv.ouya.intent.category.APP" />
+            </intent-filter>
+        </activity> <!-- Small hack to support launcher shortcuts without relaunching over and over again when the back button is pressed -->
+        <activity
+            android:name="com.limelight.ShortcutTrampoline"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:enableOnBackInvokedCallback="true"
+            android:exported="true"
+            android:noHistory="true"
+            android:resizeableActivity="true" >
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowSize"
+                android:value="system-default" />
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowOrientation"
+                android:value="landscape" />
+        </activity>
+        <activity
+            android:name="com.limelight.AppView"
+            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:enableOnBackInvokedCallback="true"
+            android:resizeableActivity="true" >
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowSize"
+                android:value="system-default" />
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowOrientation"
+                android:value="landscape" />
+        </activity>
+        <activity
+            android:name="com.limelight.preferences.StreamSettings"
+            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:enableOnBackInvokedCallback="true"
+            android:label="Streaming Settings"
+            android:resizeableActivity="true" >
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowSize"
+                android:value="system-default" />
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowOrientation"
+                android:value="landscape" />
+        </activity>
+        <activity
+            android:name="com.limelight.preferences.AddComputerManually"
+            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:enableOnBackInvokedCallback="true"
+            android:label="Add Computer Manually"
+            android:resizeableActivity="true"
+            android:windowSoftInputMode="stateVisible" >
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowSize"
+                android:value="system-default" />
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowOrientation"
+                android:value="landscape" />
+        </activity>
+        <activity
+            android:name="com.limelight.Game"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:enableOnBackInvokedCallback="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:preferMinimalPostProcessing="true"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/StreamTheme" >
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowSize"
+                android:value="system-default" />
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowOrientation"
+                android:value="landscape" />
+
+            <!--
+                 Special metadata for NVIDIA Shield devices to prevent input buffering
+                 and most importantly, opt out of mouse acceleration while streaming
+            -->
+            <meta-data
+                android:name="com.nvidia.immediateInput"
+                android:value="true" />
+            <meta-data
+                android:name="com.nvidia.rawCursorInput"
+                android:value="true" />
+        </activity>
+
+        <service
+            android:name="com.limelight.discovery.DiscoveryService"
+            android:label="mDNS PC Auto-Discovery Service" />
+        <service
+            android:name="com.limelight.computers.ComputerManagerService"
+            android:label="Computer Management Service" />
+        <service
+            android:name="com.limelight.binding.input.driver.UsbDriverService"
+            android:label="Usb Driver Service" />
+
+        <activity
+            android:name="com.limelight.HelpActivity"
+            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:enableOnBackInvokedCallback="true"
+            android:resizeableActivity="true" >
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowSize"
+                android:value="system-default" />
+            <meta-data
+                android:name="WindowManagerPreference:FreeformWindowOrientation"
+                android:value="landscape" />
+        </activity>
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.limelight.debug.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

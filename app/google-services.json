@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "710078996391",
+    "firebase_url": "https://cloudrift-hndrx-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "cloudrift-hndrx",
+    "storage_bucket": "cloudrift-hndrx.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710078996391:android:cf025d1385f1fa9bf92082",
+        "android_client_info": {
+          "package_name": "com.limelight"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlMh2-71UyYUjmbImy2huNq-r1A1XhyhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710078996391:android:2d603e10b07b57a4f92082",
+        "android_client_info": {
+          "package_name": "com.limelight.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlMh2-71UyYUjmbImy2huNq-r1A1XhyhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710078996391:android:2d603e10b07b57a4f92082",
+        "android_client_info": {
+          "package_name": "com.limelight.unofficial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlMh2-71UyYUjmbImy2huNq-r1A1XhyhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

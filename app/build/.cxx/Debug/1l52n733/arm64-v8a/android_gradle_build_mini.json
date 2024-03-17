@@ -1,0 +1,78 @@
+{
+  "buildFiles": [
+    "C:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\jni\\Android.mk",
+    "C:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\jni\\Application.mk"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+      "NDK_PROJECT_PATH\u003dnull",
+      "APP_BUILD_SCRIPT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\jni\\Android.mk",
+      "NDK_APPLICATION_MK\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\jni\\Application.mk",
+      "APP_ABI\u003darm64-v8a",
+      "NDK_ALL_ABIS\u003darm64-v8a",
+      "NDK_DEBUG\u003d1",
+      "APP_PLATFORM\u003dandroid-16",
+      "NDK_OUT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733/obj",
+      "NDK_LIBS_OUT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733/lib",
+      "PRODUCT_FLAVOR\u003dnonRoot",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+    "NDK_PROJECT_PATH\u003dnull",
+    "APP_BUILD_SCRIPT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\jni\\Android.mk",
+    "NDK_APPLICATION_MK\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\jni\\Application.mk",
+    "APP_ABI\u003darm64-v8a",
+    "NDK_ALL_ABIS\u003darm64-v8a",
+    "NDK_DEBUG\u003d1",
+    "APP_PLATFORM\u003dandroid-16",
+    "NDK_OUT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733/obj",
+    "NDK_LIBS_OUT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733/lib",
+    "PRODUCT_FLAVOR\u003dnonRoot",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "cpufeatures-nonRootDebug-arm64-v8a": {
+      "artifactName": "cpufeatures",
+      "buildCommandComponents": [
+        "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\jni\\Application.mk",
+        "APP_ABI\u003darm64-v8a",
+        "NDK_ALL_ABIS\u003darm64-v8a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733/lib",
+        "PRODUCT_FLAVOR\u003dnonRoot",
+        "C:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733/obj/local/arm64-v8a/libcpufeatures.a"
+      ],
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733\\obj\\local\\arm64-v8a\\libcpufeatures.a",
+      "runtimeFiles": []
+    },
+    "moonlight-core-nonRootDebug-arm64-v8a": {
+      "artifactName": "moonlight-core",
+      "buildCommandComponents": [
+        "C:\\Users\\PC\\AppData\\Local\\Android\\Sdk\\ndk\\23.2.8568313\\ndk-build.cmd",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\jni\\Android.mk",
+        "NDK_APPLICATION_MK\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\src\\main\\jni\\Application.mk",
+        "APP_ABI\u003darm64-v8a",
+        "NDK_ALL_ABIS\u003darm64-v8a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733/obj",
+        "NDK_LIBS_OUT\u003dC:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733/lib",
+        "PRODUCT_FLAVOR\u003dnonRoot",
+        "C:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733/obj/local/arm64-v8a/libmoonlight-core.so"
+      ],
+      "abi": "arm64-v8a",
+      "output": "C:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\cxx\\Debug\\1l52n733\\obj\\local\\arm64-v8a\\libmoonlight-core.so",
+      "runtimeFiles": []
+    }
+  }
+}

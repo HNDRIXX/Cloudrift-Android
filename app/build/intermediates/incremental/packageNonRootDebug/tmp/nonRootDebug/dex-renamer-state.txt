@@ -1,0 +1,4 @@
+#Sun Mar 17 10:54:58 SGT 2024
+base.0=C\:\\Users\\PC\\Desktop\\cloudrift\\app\\build\\intermediates\\dex\\nonRootDebug\\minifyNonRootDebugWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

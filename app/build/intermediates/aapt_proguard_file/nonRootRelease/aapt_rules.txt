@@ -1,0 +1,25 @@
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+-keep class com.google.android.gms.common.api.GoogleApiActivity { <init>(); }
+-keep class com.google.firebase.components.ComponentDiscoveryService { <init>(); }
+-keep class com.google.firebase.provider.FirebaseInitProvider { <init>(); }
+-keep class com.limelight.AppView { <init>(); }
+-keep class com.limelight.Game { <init>(); }
+-keep class com.limelight.HelpActivity { <init>(); }
+-keep class com.limelight.PcView { <init>(); }
+-keep class com.limelight.PosterContentProvider { <init>(); }
+-keep class com.limelight.ShortcutTrampoline { <init>(); }
+-keep class com.limelight.binding.input.driver.UsbDriverService { <init>(); }
+-keep class com.limelight.computers.ComputerManagerService { <init>(); }
+-keep class com.limelight.discovery.DiscoveryService { <init>(); }
+-keep class com.limelight.preferences.AddComputerManually { <init>(); }
+-keep class com.limelight.preferences.StreamSettings { <init>(); }
+-keep class com.limelight.preferences.ConfirmDeleteOscPreference { <init>(...); }
+
+-keep class com.limelight.preferences.LanguagePreference { <init>(...); }
+
+-keep class com.limelight.preferences.SeekBarPreference { <init>(...); }
+
+-keep class com.limelight.preferences.SmallIconCheckboxPreference { <init>(...); }
+
+-keep class com.limelight.ui.StreamView { <init>(android.content.Context, android.util.AttributeSet); }
+
